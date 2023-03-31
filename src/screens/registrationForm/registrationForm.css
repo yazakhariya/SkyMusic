@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Stratos';
+    src: url('../fonts/Stratos-Regular.woff2') format('woff2'),
+        url('../fonts/Stratos-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    background: rgba(0, 0, 0, 0.85);
+    font-family: 'Stratos';
+}
+
+.registerBox {
+    position: absolute;
+    width: 366px;
+    height: 439px;
+    left: 777px;
+    top: 320.5px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    font-family: 'Stratos';
+}
+
+.repeatPassInput {
+    position: absolute;
+    width: 278.5px;
+    left: 40.5px;
+    top: 278px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #D0CECE;
+    font-family: 'Stratos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.003em;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #D0CECE;
+}
+
+.loginInput {
+    position: absolute;
+    width: 278.5px;
+    left: 40.5px;
+    top: 138px;
+    border: none;
+    border-bottom: 1px solid #D0CECE;
+    font-family: 'Stratos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.003em;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    outline: none;
+    color: #D0CECE;
+}
+
+.passInput {
+    position: absolute;
+    width: 278.5px;
+    left: 40.5px;
+    top: 208px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #D0CECE;
+    font-family: 'Stratos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.003em;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #D0CECE;
+}
+
+.logo {
+    position: absolute;
+    width: 140px;
+    height: 21px;
+    left: 113px;
+    top: 43px;
+}
+
+::placeholder {
+    color: #D0CECE;
+}
