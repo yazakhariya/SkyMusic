@@ -1,7 +1,7 @@
 import React from 'react'
 import './mainPageScreen.css';
-import Bar from './mainPageComponents/bar';
-import MainPartOfThePage from './mainPageComponents/mainPart';
+import Bar from './mainPageComponents/bar/bar';
+import MainPartOfThePage from './mainPageComponents/mainPart/mainPart';
 
 
 const MainPageScreen = () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReactSVG } from "react-svg";
-import like from '../../img/icon/like.svg';
-import dislike from '../../img/icon/dislike.svg';
+import like from '../../../img/icon/like.svg';
+import dislike from '../../../img/icon/dislike.svg';
 
 function PlayingTrackLikeDis() {
     return (

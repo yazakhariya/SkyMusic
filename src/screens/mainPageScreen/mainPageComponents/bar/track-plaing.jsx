@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactSVG } from "react-svg";
-import sprite from '../../img/icon/sprite.svg';
+import sprite from '../../../img/icon/sprite.svg';
 
 function PlayingTrackElements() {
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import luna from '../../img/icon/Group 48096406.png';
 
 function NavMenu() {
     return (
@@ -7,6 +8,9 @@ function NavMenu() {
                 <li className="menu__item"><a href="http://" className="menu__link">Главное</a></li>
                 <li className="menu__item"><a href="http://" className="menu__link">Мой плейлист</a></li>
                 <li className="menu__item"><a href="http://" className="menu__link">Войти</a></li>
+                <div>
+                    <img alt='Night Mode' src={luna}/>
+                </div> 
             </ul>
         </div>
     )
