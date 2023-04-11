@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReactSVG } from "react-svg";
-import volume from '../../img/icon/volume.svg';
-import InputForm from '../../registrationForm/inputForm';
+import volume from '../../../img/icon/volume.svg';
+import InputForm from '../../../registrationForm/inputForm';
 
 function VolumeContent() {
 

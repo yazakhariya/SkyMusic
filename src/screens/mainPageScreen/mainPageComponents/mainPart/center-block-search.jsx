@@ -1,6 +1,6 @@
 import React from 'react';
-import { ReactComponent as Search } from '../../img/icon/search.svg';
-import InputForm from '../../registrationForm/inputForm';
+import { ReactComponent as Search } from '../../../img/icon/search.svg';
+import InputForm from '../../../registrationForm/inputForm';
 
 function CenterBlockSearch() {
     return (

@@ -1,0 +1,103 @@
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li {
+    padding: 8px 12px;
+}
+   
+li:hover {
+    background-color: rgba(0, 0, 0, 0.14);
+    cursor: pointer;
+}
+
+.searchDiv{
+    margin-right: 10px;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 34px;
+    gap: 10px;
+
+    position: absolute;
+    width: 248px;
+    height: 305px;
+    left: 386px;
+    top: 288px;
+
+    background: #313131;
+    border-radius: 12px;
+}
+
+.dropdown-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 34px;
+    gap: 14px;
+    justify-content: space-between;
+
+    position: absolute;
+    width: 403px;
+    height: 92px;
+
+    background: #313131;
+    border-radius: 12px;
+}
+
+.dropdown-2-item {
+    display: flex;
+    gap: 14px;
+}
+
+.dropdown-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 34px;
+    gap: 10px;
+
+    position: absolute;
+    width: 248px;
+    height: 305px;
+    left: 700px;
+    top: 288px;
+
+    background: #313131;
+    border-radius: 12px;
+}
+
+.dropdownMenu {
+    width: 176px;
+    height: 237px;
+    overflow-y: scroll;
+}
+
+.dropdownMenu::-webkit-scrollbar {
+    width: 4px;
+    height: 237px;
+    right: 76px;
+}
+
+.dropdownMenu::-webkit-scrollbar-track {
+    background: #4B4949;
+}
+
+.dropdownMenu::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #FFFFFF;
+}
+
+.item:hover {
+    text-decoration-line: underline;    
+    color: #B672FF;
+}
+
+.item:active {
+    text-decoration-line: underline;    
+    color: #B672FF;
+}

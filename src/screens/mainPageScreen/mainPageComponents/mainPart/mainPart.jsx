@@ -1,9 +1,9 @@
-import CenterblockFilter from './centerblock-filter';
 import CenterblockContent from './centerblock-content';
-import PlaylistItem from './playlist-item-form';
+import Playlist from './playlist/playlist-form';
 import SideBar from './main-sideBar';
 import NavigationMenu from './main-navigation';
 import CenterBlockSearch from './center-block-search';
+import CenterblockFilter from './centerblock-filter/centerblock-filter';
 
 function MainPartOfThePage() {
     return (
@@ -16,7 +16,7 @@ function MainPartOfThePage() {
                 <div className="centerblock__content">
                     <CenterblockContent />
                     <div className="content__playlist playlist">
-                        <PlaylistItem />
+                        <Playlist />
                     </div>
                 </div>
             </div>

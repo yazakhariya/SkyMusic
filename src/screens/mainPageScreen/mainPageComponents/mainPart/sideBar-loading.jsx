@@ -1,10 +1,10 @@
 import React from 'react';
-import playlist1 from '../../img/playlist01.png';
-import playlist2 from '../../img/playlist02.png';
-import playlist3 from '../../img/playlist03.png';
+import playlist1 from '../../../img/sceleton/Rectangle 17.png';
+import playlist2 from '../../../img/sceleton/Rectangle 17.png';
+import playlist3 from '../../../img/sceleton/Rectangle 17.png';
 
-const SideBar = () => {
-    
+const SideBarLoading = () => {
+
     return (
         <div className="main__sidebar sidebar">
             <div className="sidebar__personal">
@@ -32,6 +32,7 @@ const SideBar = () => {
             </div>
         </div>
     )
+    
 }
 
-export default SideBar;
+export default SideBarLoading;

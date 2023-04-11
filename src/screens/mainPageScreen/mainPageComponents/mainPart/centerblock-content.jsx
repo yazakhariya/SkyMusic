@@ -1,5 +1,5 @@
 import React from 'react';
-import watch from '../../img/icon/watch.svg';
+import watch from '../../../img/icon/watch.svg';
 import { ReactSVG } from "react-svg";
 
 const CenterblockContent = () => {

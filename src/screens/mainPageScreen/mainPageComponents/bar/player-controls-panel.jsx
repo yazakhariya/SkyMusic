@@ -1,10 +1,10 @@
 import React from 'react';
-import PlayerControls from './player-controls';
-import prev from '../../img/icon/prev.svg';
-import play from '../../img/icon/play.svg';
-import next from '../../img/icon/next.svg';
-import repeat from '../../img/icon/repeat.svg';
-import shuffle from '../../img/icon/shuffle.svg';
+import PlayerControls from '../player-controls';
+import prev from '../../../img/icon/prev.svg';
+import play from '../../../img/icon/play.svg';
+import next from '../../../img/icon/next.svg';
+import repeat from '../../../img/icon/repeat.svg';
+import shuffle from '../../../img/icon/shuffle.svg';
 
 function PlayerControlsPanel() {
     return (
