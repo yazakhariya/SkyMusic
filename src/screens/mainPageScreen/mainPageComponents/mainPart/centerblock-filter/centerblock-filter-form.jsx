@@ -1,12 +1,11 @@
 import React from 'react';
-import './authors.css';
+import s from './authors.module.css';
 
-function DropdownSelectForm(props) {
-    const { label, onClick } = props;
+function DropdownSelectForm({ label, onClick }) {
     
     return (
-        <div className='searchDiv' onClick={onClick}>
-            <div className='filter__button _btn-text'>{label}</div>     
+        <div className={s.searchDiv} onClick={onClick}>
+            <div className={`${s.filter__button} ${s._btn_text}`}>{label}</div>     
         </div>
     )
 }

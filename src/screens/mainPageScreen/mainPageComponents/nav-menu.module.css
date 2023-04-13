@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Stratos';
+    src: url('../../fonts/Stratos-Regular.woff2') format('woff2'),
+        url('../../fonts/Stratos-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.nav__menu {
+    display: block;
+    visibility: visible;
+    position: absolute;
+}
+
+.menu__list {
+    padding: 18px 0 10px 0;
+}
+  
+.menu__item {
+    padding: 5px 0;
+    margin-bottom: 16px;
+}
+
+
+.menu__link {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}

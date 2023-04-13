@@ -1,29 +1,24 @@
 import React, { useState } from 'react';
-import './authors.css';
+import s from './authors.module.css';
 import DropdownSelectForm from './centerblock-filter-form';
 
 function AuthorList(props) {
-    const [dropdownState, setDropdownState] = useState({ open: false });
+    const [dropdownState, setDropdownState] = useState(false);
 
-    const [selectedOptions, setSelectedOptions] = useState([]);
- 
-    const handleMultiSelectChange = (selectedOptions) => {
-        setSelectedOptions(selectedOptions);
-        console.log(selectedOptions)
-    };
+    // const [selected, setSelected] = useState([0])
     
-    const handleDropdownClick = () => setDropdownState({ open: !dropdownState.open });
+    const handleDropdownClick = () => setDropdownState(!dropdownState);
 
     const { items } = props;
     
     return (
-        <div centerblock__filter filter>
+        <div>
             <DropdownSelectForm label="исполнителю" onClick={handleDropdownClick} />
-            {dropdownState.open && (
-                <div className='dropdown' onClick={handleMultiSelectChange}>
-                    <ul className='dropdownMenu'>
+            {dropdownState && (
+                <div className={s.dropdown}>
+                    <ul className={s.dropdownMenu}>
                     {items.map((item) => (
-                            <li className='item' key={item.id}>{item.author}</li>
+                            <li className={s.item} key={item.id}>{item.author}</li>
                         ))}
                     </ul>
                 </div>

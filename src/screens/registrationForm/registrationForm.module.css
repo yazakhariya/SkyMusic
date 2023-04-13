@@ -96,3 +96,30 @@ body {
 ::placeholder {
     color: #D0CECE;
 }
+
+.registerButton {
+    position: absolute;
+    width: 278px;
+    height: 52px;
+    left: 41px;
+    top: 340px;
+    background: #580EA2;
+    border: 1px solid #580EA2;
+    color: #FFFFFF;
+    border-radius: 6px;
+    font-family: 'Stratos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.003em;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.registerButton:hover {
+    background: #3F007D;
+}
+
+.registerButton:active {
+    background: #271A58;
+}

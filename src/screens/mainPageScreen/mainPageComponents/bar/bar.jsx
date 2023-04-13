@@ -4,6 +4,7 @@ import PlayingTrackLikeDis from './track-playing-like-dis';
 import VolumeContent from './volume-content';
 import PlayerControlsPanel from './player-controls-panel';
 import BarLoading from './bar-loading';
+import s from './bar.module.css';
 
 function Bar() {
     const [show, setShow] = useState(false)
@@ -15,21 +16,21 @@ function Bar() {
 
     return () => clearTimeout(timeout)
 
-    }, [show])
+    }, [])
 
     return (
-        <div className="bar">
-          <div className="bar__content">
-            <div className="bar__player-progress"></div>
-              <div className="bar__player-block">
-                <div className="bar__player player">
+        <div className={s.bar}>
+          <div className={s.bar__content}>
+            <div className={s.bar__player_progress}></div>
+              <div className={s.bar__player_block}>
+                <div className={s.bar__player}>
                   <PlayerControlsPanel />
-                  <div className="player__track-play track-play">
+                  <div className={s.player__track_play}>
                     {(!show) ? <BarLoading /> : <PlayingTrackElements />}
                     <PlayingTrackLikeDis />
                   </div>
                 </div>
-                <div className="bar__volume-block volume">
+                <div className={s.bar__volume_block}>
                   <VolumeContent />
                 </div>
               </div>

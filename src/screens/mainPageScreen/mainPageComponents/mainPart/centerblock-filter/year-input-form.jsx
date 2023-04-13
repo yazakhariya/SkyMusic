@@ -1,9 +1,10 @@
 import React from 'react';
+import s from './authors.module.css';
 
 function YearForm(props) {
     const { value } = props;
     return (
-        <div className='dropdown-2-item'>
+        <div className={s.dropdown_2_item}>
             <input type='radio'></input>
             <span>{value}</span>    
         </div>

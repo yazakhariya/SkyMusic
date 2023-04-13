@@ -1,12 +1,13 @@
 import React from "react";
+import s from './nav-burger.module.css';
 
 function NavBurger(props) {
     const { onClick } = props;
     return (
-        <div onClick={onClick} className="nav__burger burger">
-            <span className="burger__line"></span>
-            <span className="burger__line"></span>
-            <span className="burger__line"></span>
+        <div onClick={onClick} className={s.nav__burger}>
+            <span className={s.burger__line}></span>
+            <span className={s.burger__line}></span>
+            <span className={s.burger__line}></span>
         </div>    
     )
 }

@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Stratos';
+    src: url('../../../../fonts/Stratos-Regular.woff2') format('woff2'),
+        url('../../../../fonts/Stratos-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -33,7 +42,7 @@ li:hover {
     border-radius: 12px;
 }
 
-.dropdown-2 {
+.dropdown_2 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -49,12 +58,12 @@ li:hover {
     border-radius: 12px;
 }
 
-.dropdown-2-item {
+.dropdown_2_item {
     display: flex;
     gap: 14px;
 }
 
-.dropdown-3 {
+.dropdown_3 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -101,3 +110,43 @@ li:hover {
     text-decoration-line: underline;    
     color: #B672FF;
 }
+
+button,
+._btn {
+  cursor: pointer;
+}
+
+._btn_text:hover {
+    border-color: #D9B6FF;
+    color: #D9B6FF;
+
+    cursor: pointer;
+}
+._btn_text:active {
+    border-color: #AD61FF;
+    color: #AD61FF;
+    cursor: pointer;
+}
+
+.filter__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 15px;
+  }
+  
+  .filter__button {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid #FFFFFF;
+    border-radius: 60px;
+    padding: 6px 20px;
+    margin-left: 5px;
+  }
+  
+  .filter__button:not(:last-child) {
+    margin-right: 5px;
+  }

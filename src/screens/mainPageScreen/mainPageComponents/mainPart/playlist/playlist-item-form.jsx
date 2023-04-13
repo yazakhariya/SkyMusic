@@ -2,30 +2,31 @@ import React from 'react';
 import { ReactSVG } from "react-svg";
 import like from '../../../../img/icon/like.svg';
 import note from '../../../../img/icon/note.svg';
+import s from './playlist-item-form.module.css';
 
 function PlaylistItem(props) {
     const { tracks } = props;
     if (!tracks || tracks.length === 0) return <p>Треки не найдены</p>;
     return (
-        <div className="playlist__item">       
+        <div className={s.playlist__item}>       
             {tracks.map((track) => {
                 return (
-                    <div key={track.id} className="playlist__track track">
-                        <div className="track__title">
-                            <ReactSVG src={note} className="track__title-image" alt="music" />
-                            <div className="track__title-text">
-                                <a className="track__title-link" href="http://">{track.name}<span className="track__title-span"></span></a>
+                    <div key={track.id} className={s.playlist__track}>
+                        <div className={s.track__title}>
+                            <ReactSVG src={note} className={s.track__title_image} alt="music" />
+                            <div className={s.track__title_text}>
+                                <a className={s.track__title_link} href="http://">{track.name}<span className={s.track__title_span}></span></a>
                             </div>
                         </div>
-                        <div className="track__author">
-                            <a className="track__author-link" href="http://">{track.author}</a>
+                        <div className={s.track__author}>
+                            <a className={s.track__author_link} href="http://">{track.author}</a>
                         </div>
-                        <div className="track__album">
-                            <a className="track__album-link" href="http://">{track.album}</a>
+                        <div className={s.track__album}>
+                            <a className={s.track__album_link} href="http://">{track.album}</a>
                         </div>
-                        <div className="track__time">
-                            <ReactSVG src={like} className="track__time-svg" alt="time" />
-                            <span className="track__time-text">{track.duration_in_seconds}</span>
+                        <div className={s.track__time}>
+                            <ReactSVG src={like} className={s.track__time_svg} alt="time" />
+                            <span className={s.track__time_text}>{track.duration_in_seconds}</span>
                         </div>
                     </div>
                 )
