@@ -22,7 +22,7 @@
   }
 
   .main__centerblock {
-    width: auto;
+    width: 60%;
     -webkit-box-flex: 3;
         -ms-flex-positive: 3;
             flex-grow: 3;
