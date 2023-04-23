@@ -1,16 +1,16 @@
 import React from 'react'
-import './mainPageScreen.css';
+import s from './mainPageScreen.module.css';
 import Bar from './mainPageComponents/bar/bar';
 import MainPartOfThePage from './mainPageComponents/mainPart/mainPart';
 
 
 const MainPageScreen = () => {
   return (
-    <div className='wrapper'>
-      <div className="container">
+    <div className={s.wrapper}>
+      <div className={s.container}>
         <MainPartOfThePage />
         <Bar />
-        <footer className="footer"></footer>
+        <footer className={s.footer}></footer>
       </div>
     </div>
   )

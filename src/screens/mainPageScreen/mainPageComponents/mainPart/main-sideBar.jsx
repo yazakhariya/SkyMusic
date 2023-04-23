@@ -3,6 +3,7 @@ import playlist1 from '../../../img/playlist01.png';
 import playlist2 from '../../../img/playlist02.png';
 import playlist3 from '../../../img/playlist03.png';
 import SideBarLoading from './sideBar-loading';
+import s from './sideBar-loading.module.css';
 
 const SideBar = () => {
     const [show, setShow] = useState(false)
@@ -19,26 +20,26 @@ const SideBar = () => {
     if (!show) return <SideBarLoading />
 
     return (
-        <div className="main__sidebar sidebar">
-            <div className="sidebar__personal">
-                <p className="sidebar__personal-name">Sergey.Ivanov</p>
-                <div className="sidebar__avatar"></div>
+        <div className={s.main__sidebar}>
+            <div className={s.sidebar__personal}>
+                <p className={s.sidebar__personal_name}>Sergey.Ivanov</p>
+                <div className={s.sidebar__avatar}></div>
             </div>
-            <div className="sidebar__block">
-                <div className="sidebar__list">
-                    <div className="sidebar__item">
-                        <a className="sidebar__link" href="#">
-                            <img className="sidebar__img" src={playlist1} alt="day's playlist"/>
+            <div className={s.sidebar__block}>
+                <div className={s.sidebar__list}>
+                    <div className={s.sidebar__item}>
+                        <a className={s.sidebar__link} href="#">
+                            <img className={s.sidebar__img} src={playlist1} alt="day's playlist"/>
                         </a>
                     </div>
-                    <div className="sidebar__item">
-                        <a className="sidebar__link" href="#">
-                            <img className="sidebar__img" src={playlist2} alt="day's playlist"/>
+                    <div className={s.sidebar__item}>
+                        <a className={s.sidebar__link} href="#">
+                            <img className={s.sidebar__img} src={playlist2} alt="day's playlist"/>
                         </a>
                     </div>
-                    <div className="sidebar__item">
-                        <a className="sidebar__link" href="#">
-                            <img className="sidebar__img" src={playlist3} alt="day's playlist"/>
+                    <div className={s.sidebar__item}>
+                        <a className={s.sidebar__link} href="#">
+                            <img className={s.sidebar__img} src={playlist3} alt="day's playlist"/>
                         </a>
                     </div>
                 </div>

@@ -1,0 +1,58 @@
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@font-face {
+  font-family: 'Stratos';
+  src: url('../../fonts/Stratos-Regular.woff2') format('woff2'),
+      url('../../fonts/Stratos-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.nav__burger {
+    width: 20px;
+    height: 36px;
+    padding: 13px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+  .nav__burger:active {
+    -webkit-animation: rotate-center 0.2s ease-in-out both;
+              animation: rotate-center 0.2s ease-in-out both;
+  }
+
+  
+.burger__line {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: #D3D3D3;
+  }

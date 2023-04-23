@@ -4,18 +4,19 @@ import SideBar from './main-sideBar';
 import NavigationMenu from './main-navigation';
 import CenterBlockSearch from './center-block-search';
 import CenterblockFilter from './centerblock-filter/centerblock-filter';
+import s from './mainPart.module.css';
 
 function MainPartOfThePage() {
     return (
-        <main className="main">
+        <main className={s.main}>
             <NavigationMenu />
-            <div className="main__centerblock centerblock">
+            <div className={s.main__centerblock}>
                 <CenterBlockSearch />
-                <h2 className="centerblock__h2">Треки</h2>
+                <h2 className={s.centerblock__h2}>Треки</h2>
                 <CenterblockFilter />
-                <div className="centerblock__content">
+                <div className={s.centerblock__content}>
                     <CenterblockContent />
-                    <div className="content__playlist playlist">
+                    <div className={s.content__playlist}>
                         <Playlist />
                     </div>
                 </div>

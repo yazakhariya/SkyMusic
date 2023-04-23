@@ -3,6 +3,7 @@ import AuthorList from './authors';
 import GenreList from './genres';
 import { useState, useEffect } from "react";
 import Year from './year';
+import s from './centerblock-filter.module.css';
 
 const CenterblockFilter = () => {
 
@@ -18,8 +19,8 @@ const CenterblockFilter = () => {
        }, [setData]);
 
     return (
-        <div className="centerblock__filter filter">
-            <div className="filter__title">Искать по:</div>
+        <div className={s.centerblock__filter}>
+            <div className={s.filter__title}>Искать по:</div>
             <AuthorList items={data.author} />
             <Year />
             <GenreList />

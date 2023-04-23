@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Stratos';
+    src: url('../../../fonts/Stratos-Regular.woff2') format('woff2'),
+        url('../../../fonts/Stratos-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.track_play__like_dis {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 26%;
+}
+
+.track_play__like, .track_play__dislike {
+  padding: 5px;
+}
+
+.track_play__dislike {
+  margin-left: 28.5px;
+}
+
+._btn_icon:active svg {
+    fill: transparent;
+    stroke: #FFFFFF;
+    cursor: pointer;
+}
+  
+._btn_icon:active .track_play__like-svg,
+._btn_icon:active .track_play__dislike-svg {
+    fill: #696969;
+    stroke: #FFFFFF;
+    cursor: pointer;
+}
+  

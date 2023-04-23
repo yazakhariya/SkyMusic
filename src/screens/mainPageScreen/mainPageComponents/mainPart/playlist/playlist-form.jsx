@@ -17,7 +17,7 @@ function Playlist() {
         .then(tracks => {
             setTrackState({ loading: false, tracks: tracks });
         })
-    }, [setTrackState]);
+    }, []);
 
     return (
         <TracksLoading isLoading={trackState.loading} tracks={trackState.tracks} />
