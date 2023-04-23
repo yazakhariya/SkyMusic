@@ -8,10 +8,6 @@ const SideBarLoading = () => {
 
     return (
         <div className={s.main__sidebar}>
-            <div className={s.sidebar__personal}>
-                <p className={s.sidebar__personal_name}>Sergey.Ivanov</p>
-                <div className={s.sidebar__avatar}></div>
-            </div>
             <div className={s.sidebar__block}>
                 <div className={s.sidebar__list}>
                     <div className={s.sidebar__item}>

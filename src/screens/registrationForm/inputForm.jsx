@@ -1,20 +1,12 @@
-import { useState } from 'react';
 
-function InputForm(props) {
-  const { placeholder, type, className } = props;
-
-  const [value, setValue] = useState('');
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
-
+function InputForm({ placeholder, type, className, onChange }) {
   return (
       <input
         className={className}
         type={type} 
-        value={value}
-        onChange={handleChange}
+        onChange={onChange}
         placeholder={placeholder}
+        required
       />
   )
 }

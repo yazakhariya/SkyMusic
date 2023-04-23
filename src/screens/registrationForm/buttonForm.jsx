@@ -1,8 +1,6 @@
 import React from 'react';
 
-function Button (props) {
-    const { href, type, value, className, onClick } = props;
-
+function Button ({ href, type, value, className, onClick }) {
     return (
         <button href={href} className={className} type={type} value={value} onClick={onClick}>{value}</button>
     )
