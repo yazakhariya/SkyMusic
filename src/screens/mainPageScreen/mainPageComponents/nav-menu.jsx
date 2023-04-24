@@ -4,6 +4,7 @@ import s from './nav-menu.module.css';
 function NavMenu({ loggedIn, setLoggedIn, setUserName }) {
 
     const handleLogOut = () => {
+        localStorage.setItem('loggedIn', false);
         setLoggedIn(false);
         setUserName('');
     }
