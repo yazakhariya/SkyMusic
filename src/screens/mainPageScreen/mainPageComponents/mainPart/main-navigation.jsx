@@ -4,7 +4,7 @@ import NavBurger from '../nav-burger';
 import NavMenu from '../nav-menu';
 import s from './main-navigation.module.css';
 
-function NavigationMenu({ loggedIn, setLoggedIn, setUserName }) {
+function NavigationMenu({ loggedIn }) {
     const [dropdownState, setDropdownState] = useState(false);
 
     const handleDropdownClick = () => setDropdownState(!dropdownState);
@@ -15,7 +15,7 @@ function NavigationMenu({ loggedIn, setLoggedIn, setUserName }) {
               <img alt='Логотип' className={s.logo__image} src={logo}/>
             </div> 
             <NavBurger onClick={handleDropdownClick} />
-            {dropdownState && (<NavMenu setUserName={setUserName} loggedIn={loggedIn} setLoggedIn={setLoggedIn} /> )}        
+            {dropdownState && (<NavMenu loggedIn={loggedIn} /> )}        
           </nav>
     )
 }

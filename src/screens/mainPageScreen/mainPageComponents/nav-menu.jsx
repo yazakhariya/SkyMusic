@@ -1,12 +1,11 @@
 import luna from '../../img/icon/Group 48096406.png';
 import s from './nav-menu.module.css';
 
-function NavMenu({ loggedIn, setLoggedIn, setUserName }) {
+function NavMenu({ loggedIn }) {
 
     const handleLogOut = () => {
         localStorage.setItem('loggedIn', false);
-        setLoggedIn(false);
-        setUserName('');
+        localStorage.setItem('userName', '');
     }
 
     return (
