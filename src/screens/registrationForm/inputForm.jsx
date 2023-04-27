@@ -1,4 +1,3 @@
-
 function InputForm({ placeholder, type, className, onChange }) {
   return (
       <input
