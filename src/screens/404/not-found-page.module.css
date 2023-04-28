@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.error_img {
+    margin-left: calc(50% - 507px);
+    margin-top: calc(25% - 243px);
+    position: absolute;
+}

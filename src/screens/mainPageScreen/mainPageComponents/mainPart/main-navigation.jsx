@@ -4,10 +4,10 @@ import NavBurger from '../nav-burger';
 import NavMenu from '../nav-menu';
 import s from './main-navigation.module.css';
 
-function NavigationMenu() {
-    const [dropdownState, setDropdownState] = useState({ open: false });
+function NavigationMenu({ loggedIn }) {
+    const [dropdownState, setDropdownState] = useState(false);
 
-    const handleDropdownClick = () => setDropdownState({ open: !dropdownState.open });
+    const handleDropdownClick = () => setDropdownState(!dropdownState);
 
     return (
         <nav className={s.main__nav}>
@@ -15,7 +15,7 @@ function NavigationMenu() {
               <img alt='Логотип' className={s.logo__image} src={logo}/>
             </div> 
             <NavBurger onClick={handleDropdownClick} />
-            {dropdownState.open && (<NavMenu /> )}        
+            {dropdownState && (<NavMenu loggedIn={loggedIn} /> )}        
           </nav>
     )
 }

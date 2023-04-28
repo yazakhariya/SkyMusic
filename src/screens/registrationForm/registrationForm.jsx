@@ -14,7 +14,7 @@ const RegistrationForm = () => {
             <InputForm className={s.loginInput} placeholder='Логин' type='text' />
             <InputForm className={s.passInput} placeholder='Пароль' type='password' />
             <InputForm className={s.repeatPassInput} placeholder='Повторите пароль' type='password' />
-            <Button className={s.registerButton} type='submit' onClick={() => navigate('/')} value='Зарегистрироваться' />
+            <Button className={s.registerButton} type='submit' onClick={() => navigate('/main')} value='Зарегистрироваться' />
         </div>
     )
 }

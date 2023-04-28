@@ -4,11 +4,11 @@ import Bar from './mainPageComponents/bar/bar';
 import MainPartOfThePage from './mainPageComponents/mainPart/mainPart';
 
 
-const MainPageScreen = () => {
+const MainPageScreen = ({ loggedIn, userName }) => {
   return (
     <div className={s.wrapper}>
       <div className={s.container}>
-        <MainPartOfThePage />
+        <MainPartOfThePage loggedIn={loggedIn} userName={userName} />
         <Bar />
         <footer className={s.footer}></footer>
       </div>
