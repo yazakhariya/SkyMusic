@@ -40,6 +40,10 @@
   margin-right: 24px;
 }
 
+.player__btn_pause {
+  margin-right: 23px
+}
+
 
 .player__btn_shuffle {
   display: -webkit-box;
