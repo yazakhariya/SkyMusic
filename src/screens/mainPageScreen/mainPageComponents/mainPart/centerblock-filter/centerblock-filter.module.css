@@ -7,6 +7,15 @@
     font-display: swap;
 }
 
+:root {
+  --text-color: #FFFFFF;
+  --background-color:  #181818;
+}
+
+[data-theme="light"] {
+  --text-color:  #181818;
+  --background-color: #FFFFFF;
+}
 
 .centerblock__filter {
   display: -webkit-box;
@@ -30,5 +39,5 @@
     line-height: 18px;
     letter-spacing: 0.001em;
     font-feature-settings: 'pnum' on, 'lnum' on;
-    color: #FFFFFF;
+    color: var(--text-color);
 }

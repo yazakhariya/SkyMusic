@@ -7,6 +7,16 @@
     font-display: swap;
 }
 
+:root {
+  --text-color: #FFFFFF;
+  --background-color:  #181818;
+}
+
+[data-theme="light"] {
+  --text-color:  #181818;
+  --background-color: #bbb6b6;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -38,7 +48,7 @@ li:hover {
     left: 386px;
     top: 288px;
 
-    background: #313131;
+    background: var(--background-color);
     border-radius: 12px;
 }
 
@@ -54,7 +64,7 @@ li:hover {
     width: 403px;
     height: 92px;
 
-    background: #313131;
+    background: var(--background-color);
     border-radius: 12px;
 }
 
@@ -76,7 +86,7 @@ li:hover {
     left: 700px;
     top: 288px;
 
-    background: #313131;
+    background: var(--background-color);
     border-radius: 12px;
 }
 
@@ -93,12 +103,12 @@ li:hover {
 }
 
 .dropdownMenu::-webkit-scrollbar-track {
-    background: #4B4949;
+    background: var(--background-color);
 }
 
 .dropdownMenu::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: #FFFFFF;
+    background: var(--text-color);
 }
 
 .item:hover {
@@ -141,7 +151,7 @@ button,
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid var(--text-color);
     border-radius: 60px;
     padding: 6px 20px;
     margin-left: 5px;

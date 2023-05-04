@@ -28,6 +28,16 @@
   font-display: swap;
 }
 
+:root {
+  --text-color: #FFFFFF;
+  --background-color:  #181818;
+}
+
+[data-theme="light"] {
+  --text-color:  #181818;
+  --background-color: #FFFFFF;
+}
+
 .nav__burger {
     width: 20px;
     height: 36px;

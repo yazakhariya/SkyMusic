@@ -7,6 +7,17 @@
   font-display: swap;
 }
 
+[data-theme="dark"] {
+  --text-color: #FFFFFF;
+  --background-color:  #0d0d0d;
+}
+
+[data-theme="light"] {
+  --text-color:  #656464;
+  --background-color: #f4f4f4;
+}
+
+
 .main {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
@@ -27,6 +38,8 @@
         -ms-flex-positive: 3;
             flex-grow: 3;
     padding: 20px 40px 20px 111px;
+    color: var(--text-color);
+  background-color: var(--background-color);
   }
 
   

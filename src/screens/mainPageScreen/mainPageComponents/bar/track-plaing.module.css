@@ -7,6 +7,16 @@
     font-display: swap;
 }
 
+:root {
+  --text-color: #FFFFFF;
+  --background-color:  #181818;
+}
+
+[data-theme="light"] {
+  --text-color:  #181818;
+  --background-color: #FFFFFF;
+}
+
 .bar__player {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28,6 +38,7 @@
   -ms-grid-column: 2;
   grid-area: author;
   min-width: 49px;
+  color: var(--text-color);
 }
 
 .track_play__author_link {
@@ -37,6 +48,7 @@
   line-height: 24px;
   color: #FFFFFF;
   white-space: nowrap;
+  color: var(--text-color);
 }
 
 .track_play__album {
@@ -44,6 +56,7 @@
   -ms-grid-column: 2;
   grid-area: album;
   min-width: 49px;
+  color: var(--text-color);
 }
 
 .track_play__album_link {
@@ -52,4 +65,5 @@
   font-size: 13px;
   line-height: 24px;
   color: #FFFFFF;
+  color: var(--text-color);
 }

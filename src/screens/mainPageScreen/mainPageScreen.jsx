@@ -10,8 +10,8 @@ const MainPageScreen = ({ loggedIn, userName }) => {
 
   return (
     <ThemeContext.Provider value={{theme,setTheme}}>
-      <div className={s.wrapper} theme-data={theme}>
-        <div className={s.container} theme-data={theme}>
+      <div className={s.wrapper}>
+        <div className={s.container}>
           <MainPartOfThePage loggedIn={loggedIn} userName={userName} />
           <Bar />
           <footer className={s.footer}></footer>

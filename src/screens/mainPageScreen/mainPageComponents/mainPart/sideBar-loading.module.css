@@ -7,9 +7,22 @@
     font-display: swap;
 }
 
+:root {
+  --text-color: #FFFFFF;
+  --background-color:  #181818;
+}
+
+[data-theme="light"] {
+  --text-color:  #181818;
+  --background-color: #FFFFFF;
+}
+
+
 .main__sidebar {
     max-width: 418px;
     padding: 20px 90px 20px 78px;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 .sidebar__personal {

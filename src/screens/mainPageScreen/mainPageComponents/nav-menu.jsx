@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import ThemeContext from './theme-context';
 import luna from '../../img/icon/Group 48096406.png';
 import sun from '../../img/icon/Group 48096407.png';
@@ -17,6 +17,12 @@ function NavMenu({ loggedIn }) {
     const handleThemeChanging = () => {     
         setTheme(theme === 'dark' ? 'light' : 'dark');
     }
+
+    useEffect(() => {
+
+        document.body.setAttribute('data-theme', theme);
+
+    }, [theme]);
 
     return (
         <div className={s.nav__menu}>
