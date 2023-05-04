@@ -1,11 +1,10 @@
 import React from 'react';
 import { ReactSVG } from "react-svg";
 
-const PlayerControls = (props) => {
-    const { className, src, alt } = props;
+const PlayerControls = ({ className, src, alt, onClick }) => {
 
     return (
-        <ReactSVG src={src} className={className} alt={alt} />
+        <ReactSVG onClick={onClick} src={src} className={className} alt={alt} />
     )
 }
 
