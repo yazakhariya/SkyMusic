@@ -10,11 +10,13 @@
 [data-theme="dark"] {
   --text-color: #FFFFFF;
   --background-color:  #0d0d0d;
+  --menu-background-color: #1C1C1C;
 }
 
 [data-theme="light"] {
-  --text-color:  #656464;
-  --background-color: #f4f4f4;
+  --text-color:  #000000;
+  --background-color: #ffffff;
+  --menu-background-color: #F6F5F3;
 }
 
 

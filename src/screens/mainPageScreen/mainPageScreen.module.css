@@ -40,7 +40,7 @@ ul li {
 }
 
 [data-theme="light"] {
-  --text-color:  #181818;
+  --text-color:  #000000;
   --background-color: #FFFFFF;
 }
 

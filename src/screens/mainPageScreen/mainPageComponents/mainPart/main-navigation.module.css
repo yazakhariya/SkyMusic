@@ -5,21 +5,11 @@
     font-style: normal;
 }
 
-[data-theme="dark"] {
-  --text-color: #FFFFFF;
-  --background-color:  #000000;
-}
-
-[data-theme="light"] {
-  --text-color:  #181818;
-  --background-color: #5b5b5b;
-}
-
 .main__nav {
     width: 244px;
     padding: 20px 0 20px 36px;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background-color: var(--menu-background-color);
   }
   .nav__logo {
     width: 113.33px;

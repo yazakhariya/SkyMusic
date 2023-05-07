@@ -10,11 +10,13 @@
 :root {
   --text-color: #FFFFFF;
   --background-color:  #181818;
+  --item-hover: #B672FF;
 }
 
 [data-theme="light"] {
   --text-color:  #181818;
   --background-color: #bbb6b6;
+  --item-hover: #580EA2;
 }
 
 ul {
@@ -113,12 +115,12 @@ li:hover {
 
 .item:hover {
     text-decoration-line: underline;    
-    color: #B672FF;
+    color: var(--item-hover);
 }
 
 .item:active {
     text-decoration-line: underline;    
-    color: #B672FF;
+    color: var(--item-hover);
 }
 
 button,
@@ -127,8 +129,8 @@ button,
 }
 
 ._btn_text:hover {
-    border-color: #D9B6FF;
-    color: #D9B6FF;
+    border-color: var(--item-hover);
+    color: var(--item-hover);
 
     cursor: pointer;
 }

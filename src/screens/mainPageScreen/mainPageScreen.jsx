@@ -12,7 +12,7 @@ const MainPageScreen = ({ loggedIn, userName }) => {
     <ThemeContext.Provider value={{theme,setTheme}}>
       <div className={s.wrapper}>
         <div className={s.container}>
-          <MainPartOfThePage loggedIn={loggedIn} userName={userName} />
+          <MainPartOfThePage theme={theme} loggedIn={loggedIn} userName={userName} />
           <Bar />
           <footer className={s.footer}></footer>
         </div>
