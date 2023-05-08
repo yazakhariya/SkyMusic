@@ -7,12 +7,23 @@
     font-display: swap;
 }
 
+:root {
+  --text-color: #FFFFFF;
+  --background-color:  #181818;
+}
+
+[data-theme="light"] {
+  --text-color:  #181818;
+  --background-color: #FFFFFF;
+}
+
 .bar {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background: rgba(28, 28, 28, 0.5);
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 .bar__content {

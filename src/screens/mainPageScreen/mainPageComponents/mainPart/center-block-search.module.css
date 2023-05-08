@@ -5,6 +5,16 @@
     font-style: normal;
 }
 
+:root {
+    --background-color:  #181818;
+    --input-text-color:#FFFFFF;
+  }
+  
+  [data-theme="light"] {
+    --background-color: #FFFFFF;
+    --input-text-color:#000000;
+  }
+
 .centerblock__search {
   width: 100%;
   border-bottom: 1px solid #4E4E4E;
@@ -32,5 +42,6 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #FFFFFF;
 }
+
+.search__text::placeholder {color:var(--input-text-color)}

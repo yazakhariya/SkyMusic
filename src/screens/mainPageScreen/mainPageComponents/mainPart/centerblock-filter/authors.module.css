@@ -7,6 +7,18 @@
     font-display: swap;
 }
 
+:root {
+  --text-color: #FFFFFF;
+  --background-color:  #181818;
+  --item-hover: #B672FF;
+}
+
+[data-theme="light"] {
+  --text-color:  #181818;
+  --background-color: #bbb6b6;
+  --item-hover: #580EA2;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -38,7 +50,7 @@ li:hover {
     left: 386px;
     top: 288px;
 
-    background: #313131;
+    background: var(--background-color);
     border-radius: 12px;
 }
 
@@ -54,7 +66,7 @@ li:hover {
     width: 403px;
     height: 92px;
 
-    background: #313131;
+    background: var(--background-color);
     border-radius: 12px;
 }
 
@@ -76,7 +88,7 @@ li:hover {
     left: 700px;
     top: 288px;
 
-    background: #313131;
+    background: var(--background-color);
     border-radius: 12px;
 }
 
@@ -93,22 +105,22 @@ li:hover {
 }
 
 .dropdownMenu::-webkit-scrollbar-track {
-    background: #4B4949;
+    background: var(--background-color);
 }
 
 .dropdownMenu::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: #FFFFFF;
+    background: var(--text-color);
 }
 
 .item:hover {
     text-decoration-line: underline;    
-    color: #B672FF;
+    color: var(--item-hover);
 }
 
 .item:active {
     text-decoration-line: underline;    
-    color: #B672FF;
+    color: var(--item-hover);
 }
 
 button,
@@ -117,8 +129,8 @@ button,
 }
 
 ._btn_text:hover {
-    border-color: #D9B6FF;
-    color: #D9B6FF;
+    border-color: var(--item-hover);
+    color: var(--item-hover);
 
     cursor: pointer;
 }
@@ -141,7 +153,7 @@ button,
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid var(--text-color);
     border-radius: 60px;
     padding: 6px 20px;
     margin-left: 5px;

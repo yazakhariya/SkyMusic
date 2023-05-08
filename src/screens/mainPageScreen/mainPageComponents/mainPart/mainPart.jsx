@@ -6,12 +6,12 @@ import CenterBlockSearch from './center-block-search';
 import CenterblockFilter from './centerblock-filter/centerblock-filter';
 import s from './mainPart.module.css';
 
-function MainPartOfThePage({ userName, loggedIn }) {
+function MainPartOfThePage({ userName, loggedIn, theme }) {
     return (
         <main className={s.main}>
-            <NavigationMenu loggedIn={loggedIn} />
+            <NavigationMenu theme={theme} loggedIn={loggedIn} />
             <div className={s.main__centerblock}>
-                <CenterBlockSearch />
+                <CenterBlockSearch theme={theme} />
                 <h2 className={s.centerblock__h2}>Треки</h2>
                 <CenterblockFilter />
                 <div className={s.centerblock__content}>
