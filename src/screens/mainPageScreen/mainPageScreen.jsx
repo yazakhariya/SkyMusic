@@ -1,23 +1,36 @@
-import React, { useState } from 'react'
 import s from './mainPageScreen.module.css';
 import Bar from './mainPageComponents/bar/bar';
 import MainPartOfThePage from './mainPageComponents/mainPart/mainPart';
-import ThemeContext from './mainPageComponents/theme-context';
+import { useAudio } from 'react-use';
+import { useGetAllTracksQuery } from '../registrationForm/AuthApi';
+import { useEffect, useState } from 'react';
 
-const MainPageScreen = ({ loggedIn, userName }) => {
+const MainPageScreen = ({ loggedIn, theme}) => {
 
-  const [theme, setTheme] = useState('dark');
+  const { data = [], isLoading} = useGetAllTracksQuery();
+  const [isPlaying, setIsPlaying] = useState(false);
 
+  const [audio, state, controls] = useAudio({
+      src: localStorage.getItem('track-file'),
+      autoPlay: true,
+  });
+
+  useEffect(() => {
+    if (isPlaying) {
+      controls.play();
+    } else {
+      controls.pause();
+    }
+}, [isPlaying]);
+  
   return (
-    <ThemeContext.Provider value={{theme,setTheme}}>
       <div className={s.wrapper}>
         <div className={s.container}>
-          <MainPartOfThePage theme={theme} loggedIn={loggedIn} userName={userName} />
-          <Bar />
+          <MainPartOfThePage setIsPlaying={setIsPlaying} isLoading={isLoading} data={data} theme={theme} loggedIn={loggedIn} />
+          <Bar onPauseClick={setIsPlaying} isPlaying={isPlaying} audio={audio} state={state} controls={controls}/>
           <footer className={s.footer}></footer>
         </div>
       </div>
-    </ThemeContext.Provider>
   )
 }
 

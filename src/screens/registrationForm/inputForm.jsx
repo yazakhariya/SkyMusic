@@ -1,6 +1,7 @@
-function InputForm({ placeholder, type, className, onChange, ref }) {
+function InputForm({ placeholder, type, className, onChange, ref, value }) {
   return (
       <input
+        value={value}
         className={className}
         type={type} 
         onChange={onChange}

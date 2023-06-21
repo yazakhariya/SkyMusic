@@ -1,44 +1,57 @@
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useLoginUserMutation, useGetTokenMutation } from './AuthApi';
 import InputForm from './inputForm';
 import Button from './buttonForm';
 import s from './loginPage.module.css';
 import logo from './Group 48096389.png';
 
-function LoginPage({ setLoggedIn, setUserName }) {
+const LoginPage = ({setLoggedIn}) => {
+    let navigate = useNavigate();
+    const [loginUser] = useLoginUserMutation();
+    const [getToken, {data, isError, error}] = useGetTokenMutation();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [errorMsg, setErrorMsg] = useState('');
 
-    const navigate = useNavigate();
-    const [ userLogin, setUserLogin ] = useState('');
-    const [ userPassword, setUserPassword ] = useState('');
+    useEffect(() => {
+        if(data) {
+            localStorage.setItem('loggedIn', true);
+            localStorage.setItem('token', data.access);
+            localStorage.setItem('refreshToken', data.refresh);
+            localStorage.setItem('email', email);
+            localStorage.setItem('pwd', password);
+            setLoggedIn(true);
+            setEmail('');
+            setPassword('');
+            navigate('/main');
+        }
 
-    function handleLogIn(e) {
+        if(isError) {
+            setErrorMsg(error.message);
+        }
+
+    }, [data, isError]);
+
+    const handleLogIn = async (e) => {
         e.preventDefault();
-
-        localStorage.setItem('loggedIn', true);
-        localStorage.setItem('userName', userLogin);
-        localStorage.setItem('userPassword', userPassword);
-        
-        setUserName(userLogin);
-        setLoggedIn(true);
-        navigate('/main');
-    }
-
-    function handleLogin(e) {
-        setUserLogin(e.target.value);
-    }
-
-    function handlePassword(e) {
-        setUserPassword(e.target.value);
-        
+        await loginUser({email, password});
+        await getToken({email, password});
     }
 
     return (
-        <div className={s.registerBox}>
-            <img alt='Логотип' className={s.logo} src={logo}/>
-            <InputForm className={s.loginInput} placeholder='Логин' type='text' onChange={handleLogin} required /><br/>
-            <InputForm className={s.passInput} placeholder='Пароль' type='password' onChange={handlePassword} required />
-            <Button className={s.loginButton} type='submit' onClick={handleLogIn} value='Войти' /><br/>
-            <Button className={s.registerButton} type='submit' onClick={() => navigate('/register')} value='Зарегистрироваться' />
+        <div>
+            {isError 
+            ? 
+            <p style={{ color: "red" }}>{errorMsg} / Reload the page </p> 
+            : 
+            <div className={s.registerBox}>
+                <img alt='Логотип' className={s.logo} src={logo}/>
+                <InputForm className={s.loginInput} placeholder='Почта' type='text' value={email} onChange={(e) => setEmail(e.target.value)} required /><br/>
+                <InputForm className={s.passInput} placeholder='Пароль' type='password' value={password} onChange={(e) => setPassword(e.target.value)} required />
+                <Button className={s.loginButton} type='submit' onClick={handleLogIn} value='Войти' /><br/>
+                <Button className={s.registerButton} type='submit' onClick={() => navigate('/register')} value='Зарегистрироваться' />
+            </div>}
         </div>
     )
 }

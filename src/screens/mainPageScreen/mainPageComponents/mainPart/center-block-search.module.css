@@ -8,11 +8,13 @@
 :root {
     --background-color:  #181818;
     --input-text-color:#FFFFFF;
+    --color: white;
   }
   
   [data-theme="light"] {
     --background-color: #FFFFFF;
     --input-text-color:#000000;
+    --color: black;
   }
 
 .centerblock__search {
@@ -42,6 +44,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  color:var(--color);
 }
 
 .search__text::placeholder {color:var(--input-text-color)}

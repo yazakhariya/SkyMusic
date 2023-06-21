@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Year from './year';
 import s from './centerblock-filter.module.css';
 
-const CenterblockFilter = () => {
+const CenterblockFilter = ({selectGenres, selectAuthor}) => {
 
     const [data, setData] = useState({
         author: null,
@@ -21,9 +21,9 @@ const CenterblockFilter = () => {
     return (
         <div className={s.centerblock__filter}>
             <div className={s.filter__title}>Искать по:</div>
-            <AuthorList items={data.author} />
+            <AuthorList selectAuthor={selectAuthor} items={data.author} />
             <Year />
-            <GenreList />
+            <GenreList selectGenres={selectGenres} />
         </div>
     )
 }

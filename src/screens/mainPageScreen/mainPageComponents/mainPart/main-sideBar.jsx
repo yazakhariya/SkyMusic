@@ -5,7 +5,7 @@ import playlist3 from '../../../img/playlist03.png';
 import SideBarLoading from './sideBar-loading';
 import s from './sideBar-loading.module.css';
 
-const SideBar = ({ userName }) => {
+const SideBar = () => {
     const [show, setShow] = useState(false)
 
     useEffect(() => {
@@ -18,6 +18,8 @@ const SideBar = ({ userName }) => {
     }, [show])
 
     if (!show) return <SideBarLoading />
+
+    const userName = localStorage.getItem('user');
     
     return (
         <div className={s.main__sidebar}>

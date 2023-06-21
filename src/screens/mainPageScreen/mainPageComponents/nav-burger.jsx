@@ -1,4 +1,3 @@
-import React from "react";
 import s from './nav-burger.module.css';
 
 function NavBurger({ onClick }) {

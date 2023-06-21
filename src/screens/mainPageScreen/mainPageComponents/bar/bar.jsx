@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import PlayingTrackElements from './track-plaing';
 import PlayingTrackLikeDis from './track-playing-like-dis';
 import VolumeContent from './volume-content';
 import BarLoading from './bar-loading';
 import s from './bar.module.css';
-import tracks from './tracks';
 
-function Bar() {
+function Bar({audio, onPauseClick, controls, isPlaying}) {
     const [show, setShow] = useState(false)
 
     useEffect(() => {
@@ -23,10 +22,10 @@ function Bar() {
           <div className={s.bar__content}>
             <div className={s.bar__player_progress}></div>
               <div className={s.bar__player_block}>
-                {(!show) ? <BarLoading /> : <PlayingTrackElements  tracks={tracks} />}
+                {(!show) ? <BarLoading /> : <PlayingTrackElements onPauseClick={onPauseClick} isPlaying={isPlaying} audio={audio} />}
                 <PlayingTrackLikeDis />
                 <div className={s.bar__volume_block}>
-                  <VolumeContent tracks={tracks} />
+                  <VolumeContent controls={controls} />
                 </div>
               </div>
           </div>

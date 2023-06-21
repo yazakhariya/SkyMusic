@@ -4,9 +4,9 @@ import { ReactComponent as BlackSearch } from '../../../img/icon/search-).svg';
 import InputForm from '../../../registrationForm/inputForm';
 import s from './center-block-search.module.css';
 
-function CenterBlockSearch({ theme }) {
+function CenterBlockSearch({ theme, onChange }) {
     return (
-        <div className={s.centerblock__search}>
+        <div onChange={onChange} className={s.centerblock__search}>
             {
             theme === 'dark' ?
             <Search /> : <BlackSearch />
