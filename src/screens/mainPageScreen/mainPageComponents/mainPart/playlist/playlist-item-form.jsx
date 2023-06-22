@@ -2,16 +2,11 @@ import { ReactSVG } from "react-svg";
 import like from '../../../../img/icon/like.svg';
 import note from '../../../../img/icon/note.svg';
 import s from './playlist-item-form.module.css';
-import { useAddToFavoriteMutation, useGetRefreshTokenMutation } from '../../../../registrationForm/AuthApi';
+import { useAddToFavoriteMutation } from '../../../../registrationForm/AuthApi';
 
 function PlaylistItem({tracks, search, setIsPlaying}) {
 
-    const [addToFavorite, {error}] = useAddToFavoriteMutation();
-    const [getRefreshToken] = useGetRefreshTokenMutation();
-    
-    if(error) {
-        getRefreshToken(localStorage.getItem('token'));
-    }
+    const [addToFavorite] = useAddToFavoriteMutation();
 
     if (!tracks || tracks.length === 0) return <p>Треки не найдены</p>;
     return (
