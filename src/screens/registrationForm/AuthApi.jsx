@@ -35,11 +35,13 @@ export const authApi = createApi({
             },
         }),
         getRefreshToken: builder.mutation({
-            query: (body) => {
+            query: (token) => {
                 return {
                     url: 'user/token/refresh/',
                     method: 'POST',
-                    body,
+                    body: {
+                        refresh: token,
+                    }
                 }
             },
         }),
@@ -57,6 +59,26 @@ export const authApi = createApi({
                 }
             },
         }),
+        deleteFavorite: builder.mutation({
+            query: (id) => {
+                return {
+                    url: `catalog/track/${id}/favorite/`,
+                    method: 'DELETE',
+                    headers: {
+                        Authorization: `Bearer ${localStorage.getItem('token')}`,
+                    }
+                }
+            },
+        }),
+        getCollection1: builder.query({
+            query: () => 'catalog/selection/1/',
+        }),
+        getCollection2: builder.query({
+            query: () => 'catalog/selection/2/',
+        }),
+        getCollection3: builder.query({
+            query: () => 'catalog/selection/3/',
+        }),
     }),
 });
 
@@ -67,4 +89,8 @@ export const {
     useAddToFavoriteMutation, 
     useGetTokenMutation, 
     useGetRefreshTokenMutation, 
+    useDeleteFavoriteMutation,
+    useGetCollection1Query,
+    useGetCollection2Query,
+    useGetCollection3Query,
 } = authApi;

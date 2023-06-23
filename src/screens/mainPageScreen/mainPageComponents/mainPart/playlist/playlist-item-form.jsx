@@ -1,12 +1,11 @@
 import { ReactSVG } from "react-svg";
-import like from '../../../../img/icon/like.svg';
 import note from '../../../../img/icon/note.svg';
 import s from './playlist-item-form.module.css';
-import { useAddToFavoriteMutation } from '../../../../registrationForm/AuthApi';
+import LikeButton from "./likeButton";
 
-function PlaylistItem({tracks, search, setIsPlaying}) {
+function PlaylistItem({ tracks, search, setIsPlaying }) {
 
-    const [addToFavorite] = useAddToFavoriteMutation();
+    const userID = Number(localStorage.getItem('userID'));
 
     if (!tracks || tracks.length === 0) return <p>Треки не найдены</p>;
     return (
@@ -34,11 +33,11 @@ function PlaylistItem({tracks, search, setIsPlaying}) {
                         <div className={s.track__album}>
                             <a className={s.track__album_link} href="http://">{track.album}</a>
                         </div>
+                        <LikeButton track={track} likedItem={track.stared_user.some(el => el.id === userID)} />
                         <div className={s.track__time} >
-                            <ReactSVG src={like} className={s.track__time_svg} alt="time" onClick={(e) => {
-                                    e.preventDefault(); 
-                                    addToFavorite(track.id)}} />
-                            <span className={s.track__time_text}>{track.duration_in_seconds}</span>
+
+                            <span className={s.track__time_text}>{Math.floor(track.duration_in_seconds / 60) + ': ' + (track.duration_in_seconds % 60) }</span>
+
                         </div>
                     </div>
                 )

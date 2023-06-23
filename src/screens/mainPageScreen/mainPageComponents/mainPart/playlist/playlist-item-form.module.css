@@ -152,3 +152,8 @@
   color: #696969;
 }
 
+.button {
+  background: transparent;
+  border: none;
+}
+

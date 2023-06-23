@@ -30,17 +30,17 @@ const SideBar = () => {
             <div className={s.sidebar__block}>
                 <div className={s.sidebar__list}>
                     <div className={s.sidebar__item}>
-                        <a className={s.sidebar__link} href="#">
+                        <a className={s.sidebar__link} href="http://localhost:3000/collection/1/">
                             <img className={s.sidebar__img} src={playlist1} alt="day's playlist"/>
                         </a>
                     </div>
                     <div className={s.sidebar__item}>
-                        <a className={s.sidebar__link} href="#">
+                        <a className={s.sidebar__link} href="http://localhost:3000/collection/2/">
                             <img className={s.sidebar__img} src={playlist2} alt="day's playlist"/>
                         </a>
                     </div>
                     <div className={s.sidebar__item}>
-                        <a className={s.sidebar__link} href="#">
+                        <a className={s.sidebar__link} href="http://localhost:3000/collection/3/">
                             <img className={s.sidebar__img} src={playlist3} alt="day's playlist"/>
                         </a>
                     </div>

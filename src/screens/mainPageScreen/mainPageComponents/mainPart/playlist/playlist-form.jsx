@@ -1,7 +1,7 @@
 import PlaylistLoading from './playlist-loading';
 import PlaylistItem from './playlist-item-form';
 
-function Playlist({search, isLoading, data, setIsPlaying}) {
+function Playlist({ search, isLoading, data, setIsPlaying }) {
     
 
     return ( 

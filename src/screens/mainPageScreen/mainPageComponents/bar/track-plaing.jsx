@@ -11,7 +11,7 @@ import shuffle from '../../../img/icon/shuffle.svg';
 import pause from '../../../img/icon/pause-1010-svgrepo-com (1).svg';
 
 
-function PlayingTrackElements({ audio, isPlaying, onPauseClick, trackRef}) {
+function PlayingTrackElements({ audio, isPlaying, onPauseClick }) {
 
     const trackName = localStorage.getItem('track-name');
     const trackAuthor = localStorage.getItem('track-author');

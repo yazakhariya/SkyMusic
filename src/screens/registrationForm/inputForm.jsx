@@ -1,4 +1,4 @@
-function InputForm({ placeholder, type, className, onChange, ref, value }) {
+function InputForm({ placeholder, type, className, onChange, ref, value, onBlur, name }) {
   return (
       <input
         value={value}
@@ -8,6 +8,8 @@ function InputForm({ placeholder, type, className, onChange, ref, value }) {
         placeholder={placeholder}
         ref={ref}
         required
+        onBlur={onBlur}
+        name={name}
       />
   )
 }

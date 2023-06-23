@@ -4,7 +4,7 @@ import CenterblockFilter from './centerblock-filter/centerblock-filter';
 import s from './mainPart.module.css';
 import Playlist from './playlist/playlist-form';
 
-export default function Tracks({search, data, isLoading, setIsPlaying}) {
+export default function Tracks({ search, data, isLoading, setIsPlaying }) {
     
     const [genre, setGenre] = useState('');
     const [author, setAuthor] = useState('');
