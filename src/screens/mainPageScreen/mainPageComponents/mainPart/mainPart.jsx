@@ -1,27 +1,22 @@
-import CenterblockContent from './centerblock-content';
-import Playlist from './playlist/playlist-form';
 import SideBar from './main-sideBar';
 import NavigationMenu from './main-navigation';
 import CenterBlockSearch from './center-block-search';
-import CenterblockFilter from './centerblock-filter/centerblock-filter';
 import s from './mainPart.module.css';
+import Tracks from './tracks';
+import { useState } from 'react';
 
-function MainPartOfThePage({ userName, loggedIn, theme }) {
+
+function MainPartOfThePage({ loggedIn, theme, data, isLoading, setIsPlaying }) {
+    const [search, setSearch] = useState('');
+    
     return (
         <main className={s.main}>
             <NavigationMenu theme={theme} loggedIn={loggedIn} />
             <div className={s.main__centerblock}>
-                <CenterBlockSearch theme={theme} />
-                <h2 className={s.centerblock__h2}>Треки</h2>
-                <CenterblockFilter />
-                <div className={s.centerblock__content}>
-                    <CenterblockContent />
-                    <div className={s.content__playlist}>
-                        <Playlist />
-                    </div>
-                </div>
+                <CenterBlockSearch onChange={(e) => setSearch(e.target.value)} theme={theme} />
+                <Tracks setIsPlaying={setIsPlaying} isLoading={isLoading} data={data} search={search} />
             </div>
-            <SideBar userName={userName} />
+            <SideBar />
         </main>
     )
 }

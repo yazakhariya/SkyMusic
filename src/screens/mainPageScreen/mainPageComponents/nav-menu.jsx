@@ -28,7 +28,7 @@ function NavMenu({ loggedIn }) {
         <div className={s.nav__menu}>
             <ul className={s.menu__list}>
                 <li className={s.menu__item}><a href="http://localhost:3000/main" className={s.menu__link}>Главное</a></li>
-                <li className={s.menu__item}><a href="http://" className={s.menu__link}>Мой плейлист</a></li>
+                <li className={s.menu__item}><a href="http://localhost:3000/favorites" className={s.menu__link}>Мой плейлист</a></li>
                 {
                     loggedIn ?
                     <li className={s.menu__item}><button onClick={handleLogOut} className={s.menu__link}>Выйти</button></li>

@@ -2,19 +2,21 @@ import React, { useState } from 'react';
 import s from './authors.module.css';
 import DropdownSelectForm from './centerblock-filter-form';
 
-function GenreList() {
+function GenreList({selectGenres}) {
     const [dropdownState, setDropdownState] = useState(false);
 
+    function chooseGenre(e) {
+        selectGenres(e.target.value);
+    }
 
     const handleDropdownClick = () => setDropdownState(!dropdownState);
 
     const genres= [
-        'Рок',
-        'Хип-Хоп',
+        'Рок музыка',
+        'Электронная музыка',
         'Джаз',
-        'Альтернатива',
         'Рэп',
-        'Классическая',
+        'Классическая музыка',
     ]
     
     return (
@@ -22,9 +24,9 @@ function GenreList() {
             <DropdownSelectForm label="жанру" onClick={handleDropdownClick} />
             {dropdownState && (
                 <div className={s.dropdown_3}>
-                    <ul className={s.dropdownMenu}>
+                    <ul onClick={chooseGenre} className={s.dropdownMenu}>
                     {genres.map((genre) => (
-                            <li className={s.item} key={genre}>{genre}</li>
+                            <option className={s.item} key={genre}>{genre}</option>
                         ))}
                     </ul>
                 </div>

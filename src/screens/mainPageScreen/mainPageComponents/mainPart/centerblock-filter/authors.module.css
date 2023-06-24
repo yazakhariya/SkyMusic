@@ -96,6 +96,7 @@ li:hover {
     width: 176px;
     height: 237px;
     overflow-y: scroll;
+    line-height: 45px;
 }
 
 .dropdownMenu::-webkit-scrollbar {

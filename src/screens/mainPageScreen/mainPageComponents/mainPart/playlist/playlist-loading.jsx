@@ -6,12 +6,9 @@ import albomloading from '../../../../img/sceleton/Rectangle 13 (1).png';
 import s from './playlist-item-form.module.css';
 
 
-function PlaylistLoading(Component) {
-    
-    return function PlaylistLoading({ isLoading, ...props }) {
-        if (!isLoading) return <Component {...props} />;
-        return (
-            <div className={s.playlist__item}>
+function PlaylistLoading() {
+    return (
+        <div className={s.playlist__item}>
             <div className={s.playlist__track}>
                 <div className={s.track__title}>
                     <img alt='Загрузка изображения' src={noteloading}></img>
@@ -29,7 +26,6 @@ function PlaylistLoading(Component) {
                 </div>
             </div>
         </div>
-        );
-    };
+    );
 }
 export default PlaylistLoading;

@@ -104,6 +104,13 @@ body {
     color: #D0CECE;
 }
 
+.loginInputError {
+    position: absolute;
+    top: 110px;
+    color:rgb(150, 0, 0);
+    margin-left: 10px;
+}
+
 .passInput {
     position: absolute;
     width: 278.5px;
@@ -120,6 +127,13 @@ body {
     letter-spacing: -0.003em;
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: #D0CECE;
+}
+
+.passInputError {
+    position: absolute;
+    top: 180px;
+    color:rgb(150, 0, 0);
+    margin-left: 10px;
 }
 
 .logo {

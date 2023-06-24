@@ -89,6 +89,8 @@
   line-height: 24px;
   color: #FFFFFF;
   color: var(--text-color);
+  background: transparent;
+  border:none;
 }
 
 .track__title_span {
@@ -148,5 +150,10 @@
   line-height: 24px;
   text-align: right;
   color: #696969;
+}
+
+.button {
+  background: transparent;
+  border: none;
 }
 

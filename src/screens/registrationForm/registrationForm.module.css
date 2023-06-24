@@ -49,6 +49,13 @@ body {
     color: #D0CECE;
 }
 
+.repeatPassInputError {
+    position: absolute;
+    top: 250px;
+    color:rgb(150, 0, 0);
+    margin-left: 10px;
+}
+
 .loginInput {
     position: absolute;
     width: 278.5px;
@@ -67,7 +74,14 @@ body {
     color: #D0CECE;
 }
 
-.passInput {
+.loginInputError {
+    position: absolute;
+    top: 110px;
+    color:rgb(150, 0, 0);
+    margin-left: 10px;
+}
+
+.emailInput {
     position: absolute;
     width: 278.5px;
     left: 40.5px;
@@ -83,6 +97,13 @@ body {
     letter-spacing: -0.003em;
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: #D0CECE;
+}
+
+.emailInputError {
+    position: absolute;
+    top: 180px;
+    color:rgb(150, 0, 0);
+    margin-left: 10px;
 }
 
 .logo {

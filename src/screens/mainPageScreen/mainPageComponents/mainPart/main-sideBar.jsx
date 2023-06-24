@@ -5,7 +5,7 @@ import playlist3 from '../../../img/playlist03.png';
 import SideBarLoading from './sideBar-loading';
 import s from './sideBar-loading.module.css';
 
-const SideBar = ({ userName }) => {
+const SideBar = () => {
     const [show, setShow] = useState(false)
 
     useEffect(() => {
@@ -18,6 +18,8 @@ const SideBar = ({ userName }) => {
     }, [show])
 
     if (!show) return <SideBarLoading />
+
+    const userName = localStorage.getItem('user');
     
     return (
         <div className={s.main__sidebar}>
@@ -28,17 +30,17 @@ const SideBar = ({ userName }) => {
             <div className={s.sidebar__block}>
                 <div className={s.sidebar__list}>
                     <div className={s.sidebar__item}>
-                        <a className={s.sidebar__link} href="#">
+                        <a className={s.sidebar__link} href="http://localhost:3000/collection/1/">
                             <img className={s.sidebar__img} src={playlist1} alt="day's playlist"/>
                         </a>
                     </div>
                     <div className={s.sidebar__item}>
-                        <a className={s.sidebar__link} href="#">
+                        <a className={s.sidebar__link} href="http://localhost:3000/collection/2/">
                             <img className={s.sidebar__img} src={playlist2} alt="day's playlist"/>
                         </a>
                     </div>
                     <div className={s.sidebar__item}>
-                        <a className={s.sidebar__link} href="#">
+                        <a className={s.sidebar__link} href="http://localhost:3000/collection/3/">
                             <img className={s.sidebar__img} src={playlist3} alt="day's playlist"/>
                         </a>
                     </div>
