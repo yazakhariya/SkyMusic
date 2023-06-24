@@ -54,8 +54,6 @@ body {
 
 .wrapper {
   width: 100%;
-  /* color: var(--text-color);
-  background-color: var(--background-color); */
 }
 
 ::-webkit-scrollbar {
@@ -66,8 +64,6 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   position: relative;
-  /* color: var(--text-color);
-  background-color: var(--background-color); */
 }
 
 ._btn-text:hover {

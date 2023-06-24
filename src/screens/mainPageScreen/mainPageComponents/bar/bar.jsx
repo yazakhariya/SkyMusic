@@ -5,7 +5,7 @@ import VolumeContent from './volume-content';
 import BarLoading from './bar-loading';
 import s from './bar.module.css';
 
-function Bar({audio, onPauseClick, controls, isPlaying}) {
+function Bar({audio, onPauseClick, controls, isPlaying, nextTrack, prevTrack, getRandomSong }) {
     const [show, setShow] = useState(false)
 
     useEffect(() => {
@@ -22,7 +22,7 @@ function Bar({audio, onPauseClick, controls, isPlaying}) {
           <div className={s.bar__content}>
             <div className={s.bar__player_progress}></div>
               <div className={s.bar__player_block}>
-                {(!show) ? <BarLoading /> : <PlayingTrackElements onPauseClick={onPauseClick} isPlaying={isPlaying} audio={audio} />}
+                {(!show) ? <BarLoading /> : <PlayingTrackElements controls={controls} getRandomSong={getRandomSong} nextTrack={nextTrack} prevTrack={prevTrack} onPauseClick={onPauseClick} isPlaying={isPlaying} audio={audio} />}
                 <PlayingTrackLikeDis />
                 <div className={s.bar__volume_block}>
                   <VolumeContent controls={controls} />

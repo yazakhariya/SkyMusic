@@ -5,19 +5,23 @@ import NavBurger from '../nav-burger';
 import NavMenu from '../nav-menu';
 import s from './main-navigation.module.css';
 
-function NavigationMenu({ loggedIn, theme }) {
+function NavigationMenu({ loggedIn, theme, setNavActive, navActive }) {
     const [dropdownState, setDropdownState] = useState(false);
 
-    const handleDropdownClick = () => setDropdownState(!dropdownState);
+    const handleDropdownClick = () => {
+        setNavActive(true);
+        setDropdownState(!dropdownState);
+    };
+
 
     return (
-        <nav className={s.main__nav}>
+      <nav className={s.main__nav}>
             <div className={s.nav__logo}>
               <img alt='Логотип' className={s.logo__image} src={theme === 'dark' ? logo : darklogo}/>
             </div> 
             <NavBurger onClick={handleDropdownClick} />
             {dropdownState && (<NavMenu loggedIn={loggedIn} /> )}        
-          </nav>
+      </nav>
     )
 }
 
