@@ -5,7 +5,7 @@ import playlist3 from '../../../img/playlist03.png';
 import SideBarLoading from './sideBar-loading';
 import s from './sideBar-loading.module.css';
 
-const SideBar = () => {
+const SideBar = ({loggedIn}) => {
     const [show, setShow] = useState(false)
 
     useEffect(() => {
@@ -25,7 +25,7 @@ const SideBar = () => {
         <div className={s.main__sidebar}>
             <div className={s.sidebar__personal}>
                 <div className={s.sidebar__avatar}></div>
-                <p className={s.sidebar__personal_name}>{userName}</p>  
+                <p className={s.sidebar__personal_name}>{loggedIn ? userName : ''}</p>  
             </div>
             <div className={s.sidebar__block}>
                 <div className={s.sidebar__list}>

@@ -4,7 +4,7 @@ import CenterblockFilter from './centerblock-filter/centerblock-filter';
 import s from './mainPart.module.css';
 import Playlist from './playlist/playlist-form';
 
-export default function Tracks({ search, data, isLoading, setIsPlaying }) {
+export default function Tracks({ search, data, isLoading, setIsPlaying, setActive }) {
     
     const [genre, setGenre] = useState('');
     const [author, setAuthor] = useState('');
@@ -34,7 +34,7 @@ export default function Tracks({ search, data, isLoading, setIsPlaying }) {
                 <div className={s.centerblock__content}>
                     <CenterblockContent />
                     <div className={s.content__playlist}>
-                        <Playlist setIsPlaying={setIsPlaying} isLoading={isLoading} data={FilteredList} search={search} />
+                        <Playlist setActive={setActive} setIsPlaying={setIsPlaying} isLoading={isLoading} data={FilteredList} search={search} />
                     </div>
                 </div>
         </div>

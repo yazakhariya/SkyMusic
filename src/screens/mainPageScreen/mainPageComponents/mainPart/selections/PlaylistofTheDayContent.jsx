@@ -7,14 +7,14 @@ import s from '../mainPart.module.css';
 import t from '../playlist/playlist-item-form.module.css';
 import note from '../../../../img/icon/note.svg';
 
-function PlaylistofTheDayContent({loggedIn, theme, data, setIsPlaying}) {
+function PlaylistofTheDayContent({loggedIn, theme, data, setIsPlaying, setNavActive, navActive}) {
 
     const userID = Number(localStorage.getItem('userID'));
     if (!data || data.length === 0) return <p>Треки не найдены</p>;
 
     return (
         <main className={s.main}>
-            <NavigationMenu theme={theme} loggedIn={loggedIn} />
+            <NavigationMenu navActive={navActive} setNavActive={setNavActive} theme={theme} loggedIn={loggedIn} />
             <div className={s.main__centerblock}>
                 <CenterBlockSearch theme={theme} />
                 <div>

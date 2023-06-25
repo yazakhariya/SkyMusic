@@ -10,24 +10,28 @@ import repeat from '../../../img/icon/repeat.svg';
 import shuffle from '../../../img/icon/shuffle.svg';
 import pause from '../../../img/icon/pause-1010-svgrepo-com (1).svg';
 
-
-function PlayingTrackElements({ audio, isPlaying, onPauseClick }) {
+function PlayingTrackElements({ controls, audio, isPlaying, onPauseClick, nextTrack, prevTrack, getRandomSong }) {
 
     const trackName = localStorage.getItem('track-name');
     const trackAuthor = localStorage.getItem('track-author');
+
+    const startAgain = () => {
+        controls.seek(0);
+    }
     
     return (
         <div className={s.bar__player}>
             {audio}
             <div className={p.player__controls}>
-                <PlayerControls className={p.player__btn_prev} src={prev} />
+
+                <PlayerControls onClick={() => prevTrack()} className={p.player__btn_prev} src={prev} />
                 {
                     isPlaying ? <PlayerControls onClick={() => onPauseClick(false)} className={`${p.player__btn_play} ${p._btn}`} src={pause}/> 
                     : <PlayerControls onClick={() => onPauseClick(true)} className={`${p.player__btn_pause} ${p._btn}`} src={play} />
                 }
-                <PlayerControls className={p.player__btn_next} src={next} />
-                <PlayerControls className={`${p.player__btn_repeat} ${p._btn_icon}`} src={repeat} />
-                <PlayerControls className={`${p.player__btn_shuffle} ${p._btn_icon}`} src={shuffle} /> 
+                <PlayerControls onClick={() => nextTrack()} className={p.player__btn_next} src={next} />
+                <PlayerControls onClick={() => startAgain()} className={`${p.player__btn_repeat} ${p._btn_icon}`} src={repeat} />
+                <PlayerControls onClick={() =>  getRandomSong()} className={`${p.player__btn_shuffle} ${p._btn_icon}`} src={shuffle} /> 
             </div>
             <div className={s.player__track_play}>
                 <div className={s.track_play__contain}>

@@ -3,7 +3,7 @@ import note from '../../../../img/icon/note.svg';
 import s from './playlist-item-form.module.css';
 import LikeButton from "./likeButton";
 
-function PlaylistItem({ tracks, search, setIsPlaying }) {
+function PlaylistItem({ tracks, search, setIsPlaying, setActive }) {
 
     const userID = Number(localStorage.getItem('userID'));
 
@@ -21,9 +21,11 @@ function PlaylistItem({ tracks, search, setIsPlaying }) {
                             <ReactSVG src={note} className={s.track__title_image} alt="music" />
                             <div className={s.track__title_text}>
                                 <button className={s.track__title_link} onClick={() => {
+                                    localStorage.setItem('track-id', track.id);
                                     localStorage.setItem('track-author', track.author);
                                     localStorage.setItem('track-name', track.name);
                                     localStorage.setItem('track-file', track.track_file);
+                                    setActive(true);
                                     setIsPlaying(true)}}>{track.name}<span className={s.track__title_span}></span></button>
                             </div>
                         </div>
