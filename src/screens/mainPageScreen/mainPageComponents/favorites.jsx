@@ -7,13 +7,13 @@ import NavigationMenu from './mainPart/main-navigation';
 import CenterBlockSearch from './mainPart/center-block-search';
 import DisLike from './disLike';
 
-function MainPartOfThePage({ loggedIn, theme, data, setIsPlaying }) {
+function MainPartOfThePage({ loggedIn, theme, data, setIsPlaying, setNavActive, navActive }) {
     
     const userID = Number(localStorage.getItem('userID'));
 
     return (
         <main className={s.main}>
-            <NavigationMenu theme={theme} loggedIn={loggedIn} />
+            <NavigationMenu navActive={navActive} setNavActive={setNavActive} theme={theme} loggedIn={loggedIn} />
             <div className={s.main__centerblock}>
                 <CenterBlockSearch theme={theme} />
                 <div>

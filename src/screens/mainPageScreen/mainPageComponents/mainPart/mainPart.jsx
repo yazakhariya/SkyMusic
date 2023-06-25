@@ -16,7 +16,7 @@ function MainPartOfThePage({ loggedIn, theme, data, isLoading, setIsPlaying, set
                 <CenterBlockSearch onChange={(e) => setSearch(e.target.value)} theme={theme} />
                 <Tracks setActive={setActive} setIsPlaying={setIsPlaying} isLoading={isLoading} data={data} search={search} />
             </div>
-            <SideBar />
+            <SideBar loggedIn={loggedIn} />
         </main>
     )
 }

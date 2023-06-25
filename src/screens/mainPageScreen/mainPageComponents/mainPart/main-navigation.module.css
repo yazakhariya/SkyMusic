@@ -8,9 +8,16 @@
 .main__nav {
     width: 244px;
     padding: 20px 0 20px 36px;
-    color: var(--text-color);
+    color: var(--text-color); 
+  }
+
+  .main__nav_active {
+    width: 244px;
+    padding: 20px 0 20px 36px;
+    color: var(--text-color); 
     background-color: var(--menu-background-color);
   }
+
   .nav__logo {
     width: 113.33px;
     height: 43px;

@@ -4,7 +4,7 @@ import MainPartOfThePage from './mainPageComponents/mainPart/mainPart';
 
 const MainPageScreen = ({ navActive, setNavActive, active, setActive, getRandomSong, loggedIn, theme, isLoading, data, isPlaying, setIsPlaying, controls, audio, state, nextTrack, prevTrack }) => {
   
-  return (
+  return ( 
       <div className={s.wrapper}>
         <div className={s.container}>
           {!active ?
