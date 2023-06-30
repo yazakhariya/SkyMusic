@@ -1,5 +1,5 @@
 import InputForm from './inputForm';
-import { screen, render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 describe("<InputForm />", () => { 
     describe("Snapshots tests", () => { 
@@ -12,7 +12,7 @@ describe("<InputForm />", () => {
     describe("Attributes tests", () => { 
         it("should set type attribute", () => { 
             const type = "text"; 
-            render(<InputForm type={type} />); 
+            render(<InputForm placeholder={"Почта"} type={type} />); 
             expect(screen.getByPlaceholderText("Почта")).toHaveAttribute("type", type); 
         });
     });

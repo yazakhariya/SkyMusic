@@ -101,7 +101,7 @@ const RegistrationForm = () => {
         <div>
             {isError 
             ? 
-            <p style={{ color: "red" }}>{errorMsg} / Reload the page </p> 
+            <p role="error" style={{ color: "red" }}>{errorMsg} / Reload the page </p> 
             : 
             <div className={s.registerBox}>
                 <img alt='Логотип' className={s.logo} src={logo} />
