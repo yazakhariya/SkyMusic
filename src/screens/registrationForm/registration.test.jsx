@@ -1,49 +1,33 @@
-import { screen, render } from '@testing-library/react';
-import { rest } from "msw";
-import {setupServer} from 'msw/node';
-import RegistrationForm from './registrationForm';
+import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/extend-expect';
+import RegistrationForm from './registrationForm';
 
-const BASE_API_URL = 'https://painassasin.online/';
+jest.mock('./AuthApi', () => ({
+  useRegisterUserMutation: () => {
+    return [
+      jest.fn(),
+      {
+        error: { message: 'mockedErrorMessage' },
+        isError: true,
+      },
+    ];
+  },
+}));
 
-const role = "error";
 
-const MockedRegistrationForm = () => {
-
-        <BrowserRouter>
-            <RegistrationForm role={role} />
-        </BrowserRouter>
+describe('RegistrationForm', () => {
+  test('renders form elements and handles submission', async () => {
     
-}
-
-const server = setupServer(
-    rest.get(`${BASE_API_URL}/user/signup/`, (res, ctx) => {
-      return res(ctx.json(ctx.status(500)));
-    }),
-)
-  
-beforeAll(() => server.listen());
-afterEach(() => server.resetHandlers());
-afterAll(() => server.close());
-
-describe("<RegistrationForm />", () => {
-
-    server.use(
-        rest.get('/user/signup/', (res, ctx) => {
-          return res(ctx.status(500));
-        }),
+    render(
+      <BrowserRouter>
+        <RegistrationForm />
+      </BrowserRouter>
     );
 
-    it("handles server error", async () => { 
+    const errorMessage = await screen.findByRole('error');
 
-        render(
-            <MockedRegistrationForm />
-        );
-
-        await screen.findByRole("error");
-
-        expect(screen.getByRole("error")).toHaveTextContent(" / Reload the page ");
-    });
-   
+    expect(errorMessage).toHaveTextContent('mockedErrorMessage / Reload the page');
+  });
 });
+
