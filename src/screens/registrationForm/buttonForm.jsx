@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Button ({ href, type, value, className, onClick, disabled }) {
+function Button ({ href, type, value, className, onClick, disabled, dataTestId}) {
     return (
-        <button disabled={disabled} href={href} className={className} type={type} value={value} onClick={onClick}>{value}</button>
+        <button disabled={disabled} href={href} className={className} type={type} value={value} onClick={onClick} data-testid={dataTestId}>{value}</button>
     )
 }
 
