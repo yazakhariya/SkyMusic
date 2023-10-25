@@ -4,6 +4,7 @@
 - React
 - JavaScript
 - CSS-modules
+- React Redux
 
 ## Для начала работы необходимо:
 1. Сохранить проект локально: 
